@@ -11,6 +11,7 @@ on:
 
 jobs:
   greet:
+    environment: test
     runs-on: ubuntu-latest
     steps:
     - name: Send greeting
