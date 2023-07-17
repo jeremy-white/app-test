@@ -1,0 +1,17 @@
+# This is a basic workflow that is manually triggered
+name: Manual workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      proposalId:
+        description: 'Proposal Id'
+        required: true
+        type: string
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send greeting
+      run: echo "Hello ${{ inputs.name }}"
