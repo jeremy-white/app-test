@@ -1,5 +1,5 @@
 # This is a basic workflow that is manually triggered
-name: Data Deploy
+name: DAO Deploy
 
 on:
   workflow_dispatch:
@@ -9,10 +9,12 @@ on:
         required: true
         type: string
 
+run-name: Proposal [ID:${{ inputs.proposalId }}]
+
 jobs:
-  greet:
+  deploy:
     environment: test
     runs-on: ubuntu-latest
     steps:
-    - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
+    - name: Dummy
+      run: echo "ID:${{ inputs.proposalId }}"
