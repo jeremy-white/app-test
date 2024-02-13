@@ -1,15 +1,14 @@
-# This is a basic workflow that is manually triggered
-name: DAO Deploy
+name: "DAO Deploy"
 
 on:
   workflow_dispatch:
     inputs:
       improvementId:
-        description: 'Improvement Id'
+        description: "Improvement Id"
         required: true
         type: string
 
-run-name: [DIP-${{ inputs.proposalId }}]
+run-name: "[DIP-${{ inputs.proposalId }}]"
 
 jobs:
   deploy:
