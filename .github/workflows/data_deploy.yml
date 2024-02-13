@@ -4,12 +4,12 @@ name: DAO Deploy
 on:
   workflow_dispatch:
     inputs:
-      proposalId:
-        description: 'Proposal Id'
+      improvementId:
+        description: 'Improvement Id'
         required: true
         type: string
 
-run-name: Proposal [ID:${{ inputs.proposalId }}]
+run-name: [DIP-${{ inputs.proposalId }}]
 
 jobs:
   deploy:
